@@ -2307,15 +2307,31 @@ body {
 }
 
 .single_portfolio .portfolio_img {
-  /* overflow: hidden; */
-  height: 50%;
-  width: 50%;
+  overflow: hidden;
+  /* origin
+    height: 100%;
+  width: 100%;
   border-radius: 5px;
   position: relative;
   z-index: 1;
+  */
+  overflow: hidden; /* 确保内容不会超出容器 */
+  position: relative; /* 设置相对定位，以便伪元素可以绝对定位相对于它 */
+  z-index: 1; /* 设置z-index以确保图片在遮罩层之上 */
+
+}
+
+.single_portfolio .portfolio_img img {
+  width: auto; /* 保持图片宽度自动 */
+  height: auto; /* 保持图片高度自动 */
+  max-width: 100%; /* 最大宽度不超过容器宽度 */
+  max-height: 100%; /* 最大高度不超过容器高度 */
+  object-fit: cover; /* 覆盖整个容器，保持宽高比 */
+  border-radius: 5px; /* 圆角效果 */
 }
 
 .single_portfolio .portfolio_img:after {
+  content: ""; /* 必须有内容，即使是空的 */
   opacity: 0;
   visibility: hidden;
   left: 0;
