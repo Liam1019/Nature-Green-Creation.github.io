@@ -1571,7 +1571,7 @@ body {
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			12. Team 
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 .team_member {
   border: 1px solid #eaeaea;
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
@@ -1595,6 +1595,37 @@ body {
   width: auto;
   max-width: 200%;
   border-radius: 50%;
+  margin-bottom: 30px;
+}*/
+.team_member {
+  border: 1px solid #eaeaea;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  height: 290px;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 20% 15%;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Add positioning context for the img */
+  overflow: hidden; /* Ensure the image does not overflow the container */
+}
+
+.team_member:hover {
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(96, 151, 115, 0.15);
+  box-shadow: 0px 0px 45px 0px rgba(96, 151, 115, 0.15);
+}
+
+.team_member img {
+  max-width: 100%; /* Adjust the image to not exceed the container's width */
+  height: auto; /* Maintain the aspect ratio while scaling the image */
+  max-height: 100%; /* Adjust the image to not exceed the container's height */
+  border-radius: 50%;
+  position: absolute; /* Position the image absolutely within the container */
+  top: 50%; /* Position the image in the vertical center */
+  left: 50%; /* Position the image in the horizontal center */
+  transform: translate(-50%, -50%); /* Center the image by translating it */
   margin-bottom: 30px;
 }
 
